@@ -146,3 +146,38 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateCarousel);
     updateCarousel();
   });
+
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+// FAQ Accordion
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  
+  question.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+    
+    // Close all items
+    faqItems.forEach(faqItem => {
+      faqItem.classList.remove('active');
+    });
+    
+    // Toggle the clicked item
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
+
+  // Initialize the first FAQ item as open
+if (faqItems.length > 0) {
+  faqItems[0].classList.add('active');
+}
+
+// Initialize first step card as active
+if (stepItems.length > 0) {
+  const firstStepCard = stepItems[0].querySelector('.step-card-wrapper');
+  if (firstStepCard) {
+    firstStepCard.classList.add('active');
+  }
+}
