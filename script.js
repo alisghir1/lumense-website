@@ -1,3 +1,70 @@
+ // Attendre que le document soit chargé
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  // Fonction pour basculer le menu mobile
+  function toggleMenu() {
+    navLinks.classList.toggle('active');
+    
+    // Animation du burger menu
+    const spans = menuToggle.querySelectorAll('span');
+    if (navLinks.classList.contains('active')) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+    } else {
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
+  }
+  
+  // Ajouter l'événement de clic au burger menu
+  menuToggle.addEventListener('click', toggleMenu);
+  
+  // Fermer le menu lorsqu'un lien est cliqué
+  const navItems = document.querySelectorAll('.nav-links li a');
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      if (window.innerWidth <= 768) {
+        toggleMenu();
+      }
+    });
+  });
+  
+  // Gérer le redimensionnement de la fenêtre
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      const spans = menuToggle.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
+  });
+  
+  // Gérer le défilement pour changer le fond de la navbar
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+
+  });
+});
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  gsap.registerPlugin(ScrollTrigger);
 
  // Select the HTML elements needed for the animation
