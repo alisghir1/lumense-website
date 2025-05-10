@@ -508,6 +508,7 @@ body {
 }
 
 .card-text ul {
+  list-style: none;
   line-height: 2.5rem;
   padding-left: 20px;
   margin-bottom: 20px;
@@ -519,7 +520,7 @@ body {
 }
 
 .card-text li::before {
-  content: "✓";
+  content: "";
   color: white;
   font-weight: bold;
   display: inline-block;
@@ -584,7 +585,7 @@ body {
   
   .card-text ul {
     display: inline-block;
-    text-align: left;
+    text-align: center;
   }
   
   .wave-content {
@@ -1034,11 +1035,51 @@ body {
     margin: 0 0 25px;
   }
 
-  @media (min-width: 768px) {
-    .feature-grid {
-      justify-content: space-between;
-    }
+@media (max-width: 768px) {
+  .feature-section h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 60px 0 15px;
   }
+
+  .feature-section .subtitle {
+    font-size: 1rem;
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+
+  .feature-container {
+    padding: 0 20px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+  }
+
+  .feature-grid {
+    flex-direction: column;
+    align-items: left;
+    gap: 30px;
+  }
+
+  .feature-item {
+    max-width: 100%;
+    align-items: left ;
+    text-align: center;
+  }
+
+  .feature-content {
+    text-align: left;
+  }
+
+  .feature-title {
+    font-size: 1.4rem;
+  }
+
+  .feature-description {
+    font-size: 1rem;
+  }
+}
+
+  
   .containeer {
     border: 1px solid #b8b8b8;
     border-radius: 12px;
@@ -1866,14 +1907,11 @@ body {
 .edit-features {
   list-style: none;
   padding: 0;
-
 }
 
 .feature-itemm {
   display: flex;
   max-width: 500px;
-  gap: 20px;
-  padding: 0;
   gap: 15px;
   margin-bottom: 25px;
   flex-direction: row;
@@ -1912,28 +1950,50 @@ body {
 
 .edit-image {
   display: flex;
+  justify-content: center;
 }
 
 .edit-image img {
-  width: 700px;               
-  height: 400px;              
-  object-fit: cover;          
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: calc(var(--card-borderRadius, 15px) / 2);
   box-shadow: var(--card-boxShadow, 0px 10px 30px -10px rgba(0, 0, 0, 0.08));
   display: block;
 }
 
 /* Responsive ajusté */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .edit-container {
     flex-direction: column;
+    gap: 40px;
   }
-  
+
   .edit-content,
   .edit-image {
     flex: 1 1 100%;
   }
+
+  .edit-header {
+    margin-bottom: 40px;
+  }
+
+  .edit-description {
+    padding: 0 10px;
+  }
+
+  .feature-itemm {
+    max-width: 100%;
+  }
+
+  .edit-image img {
+    max-width: 100%;
+    height: auto;
+  }
 }
+
 
 
 
@@ -2043,29 +2103,35 @@ body {
 }
 
 
-.persona-container  {
+.persona-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
   max-width: 1200px;
   margin: 60px auto 20px;
+  padding: 0 20px;
 }
 
 .persona-item {
   text-align: center;
   max-width: 300px;
+  flex: 1 1 250px;
 }
 
 .persona-image {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   object-position: top;
-  margin: 0 0 0px;
+  margin-bottom: 16px;
 }
 
 .persona-title {
   font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
 }
 
 
@@ -2156,6 +2222,33 @@ body {
   to {
     transform: translateX(-50%);
   }
+}
+
+@media (max-width: 768px) {
+  .more-test-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;  /* Réduit l'espace à gauche et à droite */
+  }
+
+  .more-test-text {
+    padding-left: 10px;  /* Réduit l'espace à gauche */
+    padding-right: 10px; /* Réduit l'espace à droite */
+  }
+
+  .marquee-text {
+    padding-left: 10px;  /* Réduit l'espace à gauche */
+    padding-right: 10px; /* Réduit l'espace à droite */
+  }
+
+  /* Ajuste les autres éléments si nécessaire */
+  .more-test-text p,
+  .more-test-text h1,
+  .more-test-text h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
 }
 
 
@@ -2435,10 +2528,11 @@ body {
 
   .bundle-card {
     margin-bottom: var(--spacing-xl);
-    max-width: 500px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
