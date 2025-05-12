@@ -1946,10 +1946,11 @@ body {
 }
 
 .edit-section {
-  padding: 0px 30px;
+  padding: 0px 30px 60px;
   max-width: 1300px;
   margin: 0 auto;
   box-sizing: border-box;
+  margin-top: -50px;
 }
 
 .edit-container {
@@ -2217,6 +2218,11 @@ body {
   flex: 1 1 250px;
 }
 
+.persona-item a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
 .persona-image {
   border-radius: 50%;
   width: 220px;
@@ -2232,6 +2238,13 @@ body {
   color: #222;
 }
 
+.persona-cta {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 0;
+  width: auto;
+  max-width: fit-content;
+}
 
 
 
