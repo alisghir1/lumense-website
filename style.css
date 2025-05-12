@@ -332,6 +332,7 @@ body {
 @media (max-width: 1024px) {
   .hero-title {
     font-size: 3rem;
+    line-height: 2.8rem;
   }
   
   .nav-links {
@@ -378,7 +379,7 @@ body {
   }
   
   .hero-title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-4xl);
   }
   
   .hero-subtitle {
@@ -411,11 +412,14 @@ body {
   }
   
   .review-info {
+    margin-top: -15px;
     font-size: 0.8rem;
   }
   
   .stars {
     font-size: 1rem;
+    justify-content: center;
+    margin: 0 auto;
   }
   
   .review-text {
@@ -636,7 +640,7 @@ body {
 
 .market-title {
   margin: 0 auto 3rem;
-  font-size: 2.5rem;
+  font-size: var(--font-size-4xl);
   font-weight: 600;
   color: var(--color-text-primary, #111);
   display: inline-block;
@@ -786,7 +790,7 @@ body {
 
 
   .section-titlet {
-    font-size: 2.5rem;
+    font-size: var(--font-size-4xl);
     text-align: center;
     margin-bottom: 10px;
   }
@@ -806,7 +810,7 @@ body {
   }
   
   .heading {
-    font-size: 2.5rem;
+    font-size: var(--font-size-4xl);
     height: 50vh;
     display: flex;
     align-items: center;
@@ -948,15 +952,26 @@ body {
   }
 
 
-
+  .feature-bigtitle {
+    text-align: center;
+    justify-content: center;
+  }
 
 
   .feature-section h1 {
-    font-size: 2.5rem;
-    display: flex;
+    font-size: var(--font-size-4xl);
     justify-content: center;
     margin: 80px 0 20px;
   }
+  .feature-section h1::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0.75rem auto 0;
+  border-radius: 1px;
+}
   
   .feature-section .subtitle {
     font-size: 1.2rem;
@@ -1462,9 +1477,19 @@ body {
 }
 
 .testimonials-title {
-  font-size: 2.5rem;
+  font-size: var(--font-size-4xl);
   margin-bottom: 16px;
   color: var(--color-text-primary);
+}
+
+.testimonials-title::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0.75rem auto 0;
+  border-radius: 1px;
 }
 
 .testimonials-subtitle {
@@ -1715,11 +1740,21 @@ body {
 }
 
 .texxxt h1 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-4xl);
   margin-bottom: 16px;
   color: var(--color-text-primary);
   text-align: center;
   justify-content: center;
+}
+
+.texxxt h1::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0.75rem auto 0;
+  border-radius: 1px;
 }
 
 .texxxt p {
@@ -1909,8 +1944,9 @@ body {
   outline: 2px solid #ff7d00;
   outline-offset: 2px;
 }
+
 .edit-section {
-  padding: 60px 30px;
+  padding: 0px 30px;
   max-width: 1300px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -1943,9 +1979,19 @@ body {
 }
 
 .edit-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--color-text-primary, #2c2c2c);
   margin-bottom: 20px;
+}
+
+.edit-title::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0.75rem auto 0;
+  border-radius: 1px;
 }
 
 .edit-description {
@@ -2316,6 +2362,22 @@ body {
   margin: 0 auto 40px;
 }
 
+.section-title {
+  font-size: var(--font-size-4xl);
+  margin-bottom: 16px;
+  color: var(--color-text-primary);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0.75rem auto 0;
+  border-radius: 1px;
+}
+
 .faq-container {
   display: flex;
   flex-wrap: wrap;
@@ -2428,10 +2490,20 @@ body {
 
 .bundle-section-title {
   text-align: center;
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-4xl);
   font-weight: 700;
   margin-bottom: var(--spacing-2xl);
   color: var(--color-primary);
+}
+
+.bundle-section-title::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0.75rem auto 0;
+  border-radius: 1px;
 }
 
 .bundle-cards-container {
