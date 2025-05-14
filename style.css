@@ -1460,6 +1460,15 @@ body {
   .footer-bottom {
     padding: 15px 20px;
   }
+
+  .footer-social {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    left: 0;
+    transform: translateX(0);
+  }
 }
 .testimonials-section {
   padding: 40px 20px;
