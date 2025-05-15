@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Lumense</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/png" href="images/faviconb.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--color-background);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+    }
+    main.contact-content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .navbar {
+        position: relative;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+        <a href=""><img src="images/logo.png" alt="Logo Lumense"></a>
+        </div>
+        
+        <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        
+        <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#real">Réalisations</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="#offre">Tarifs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="">À propos</a></li>
+        </ul>
+        
+        <button class="cta-navb">Prendre rendez-vous</button>
+    </nav>
+  <main class="contact-content">
+    <section class="contact-header">
+      <h2>Contactez-nous</h2>
+      <p>Vous avez une question ou un projet ? Envoyez-nous un message.</p>
+    </section>
+    <form class="contact-form" action="#" method="post">
+      <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Sujet</label>
+        <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+      </div>
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+</body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logo_white.png" alt="Logo">
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3 class="footer-heading">Navigation</h3>
+        <ul class="footer-menu"> 
+          <li><a href="#">Réalisations</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Tarifs</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">À propos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3 class="footer-heading">Services</h3>
+        <ul class="footer-menu">
+          <li><a href="#">Portfolio Étudiant</a></li>
+          <li><a href="#">Site pour Alternance</a></li>
+          <li><a href="#">CV Interactif</a></li>
+          <li><a href="#">Showcase Projets</a></li>
+          <li><a href="#">Branding Personnel</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="contact-info">
+          <li class="contact-item email">
+            <span>contact@lumense.fr</span>
+          </li>
+          <li class="contact-item phone">
+            <span>+33 6 49 98 51 18</span>
+          </li>
+          <li class="contact-item location">
+            <span>Paris, France</span>
+          </li>
+        </ul>
+        <div class="footer-cta">
+          <a href="#" class="footer-button">Demander un devis</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copyright">
+      <p>&copy; 2025 Lumense. Tous droits réservés.</p>
+    </div>
+    <div class="footer-social">
+      <a href="#" class="social-link"><i class="social-icon linkedin"></i></a>
+      <a href="#" class="social-link"><i class="social-icon instagram"></i></a>
+      <a href="#" class="social-link"><i class="social-icon twitter"></i></a>
+      <a href="#" class="social-link"><i class="social-icon facebook"></i></a>
+    </div>
+    <div class="legal-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
+      <a href="#">CGV</a>
+    </div>
+  </div>
+</footer>
+</html>
