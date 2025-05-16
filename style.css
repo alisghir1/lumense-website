@@ -132,7 +132,7 @@ body {
   overflow: hidden;
 }
 
-.navbar a::after {
+.nav-el::after {
   content: "";
   position: absolute;
   bottom: -3px;
@@ -146,7 +146,7 @@ body {
   will-change: transform;
 }
 
-.navbar a:hover::after {
+.nav-el:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
