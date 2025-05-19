@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À propos - Lumense</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <link rel="icon" type="image/png" href="images/faviconb.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 </head>
-<body>
-      <nav class="navbar">
+<body class="about-page">
+    <nav class="navbar">
     <div class="logo">
       <a href=""><img src="images/logo.png" alt="Logo Lumense"></a>
     </div>
@@ -28,11 +28,15 @@
         <li><a class="nav-el" href="index.html#offre">Tarifs</a></li>
         <li><a class="nav-el" href="contact.html">Contact</a></li>
         <li><a class="nav-el" href="about.html">À propos</a></li>
-        </ul>
-        
+        </ul>      
     
     <button onclick="window.location.href='contact.html'" class="cta-navb">Prendre rendez-vous</button>
   </nav>
+    <section class="about-header">
+      <h2>Donnez du rayonnement à votre parcours</h2>
+      <p>Chez Lumense, nous sculptons des portfolios web sur-mesure pour que chaque étudiant ou jeune diplômé révèle son unicité et capte l’attention des recruteurs dès la première seconde.
+        En combinant storytelling, design et technologies de pointe, nous transformons votre parcours en une expérience immersive, mémorable et convaincante.</p>
+    </section>
     <section class="aboutus">
         <div class="images-grid">
             <img class="image-grid1" src="images/student-ambitieux.png" alt="">
@@ -43,9 +47,59 @@
             </div>
         </div>
         <div class="text-grid">
-
+          <div class="text-grid-content">
+            <h4>A propos de Lumense</h4>
+            <h1>Lumense, l’agence qui vous rend visible</h1>
+            <p>Chez Lumense, on conçoit des sites web uniques pour valoriser les profils ambitieux. Notre mission : transformer votre potentiel en présence digitale, avec un portfolio qui vous distingue vraiment — sans no-code, sans template, sans faux-semblant.</p>
+            <div class="word-list">
+              <ul>
+                <li><i class="fas fa-check-circle check-icon"></i>Sites 100% faits main</li>
+                <li><i class="fas fa-check-circle check-icon"></i>Identité visuelle unique</li>
+                <li><i class="fas fa-check-circle check-icon"></i>Portfolio qui convainc</li>
+              </ul>
+              <ul>
+                <li><i class="fas fa-check-circle check-icon"></i>Aucun template utilisé</li>
+                <li><i class="fas fa-check-circle check-icon"></i>Design moderne adaptatif</li>
+                <li><i class="fas fa-check-circle check-icon"></i>Livraison rapide & pro</li>
+              </ul>
+            </div>
+            <button onclick="window.location.href='index.html#offre'" class="cta-about">Décrouvrir nos offres</button>
+          </div>
         </div>
     </section>
+
+    <section class="missions">
+      <div class="missions-grid">
+        <div class="mission-grid1">
+          <div class="mission-grid-text">
+            <div class="mission-grid-title">
+              <h2>Nos valeurs</h2>
+            </div>            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+          </div>
+        </div>
+        <div class="mission-grid2">
+          <div class="mission-grid-text">
+            <div class="mission-grid-title">
+              <h2>Notre histoire</h2>
+            </div>            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+          </div>
+        </div>
+        <div class="mission-grid3">
+          <div class="mission-grid-text">
+            <div class="mission-grid-title">
+              <h2>Notre mission</h2>
+            </div>     
+            <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+          </div>
+        </div>
+      </div>
+      <div class="mission-img-container">
+        <img src="images/chasseur-alternance.png" alt="Mission image" class="mission-img">
+      </div>
+    </section>
+
 </body>
 <footer class="site-footer">
   <div class="footer-content">
