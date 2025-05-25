@@ -243,4 +243,25 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Gestion des cartes de projet sur mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        const overlay = card.querySelector('.absolute.inset-0.bg-primary-600\\/90');
+        
+        card.addEventListener('click', function(e) {
+            // Ne pas déclencher si on clique sur un lien
+            if (e.target.closest('a')) return;
+            
+            // Sur mobile uniquement
+            if (window.innerWidth < 768) {
+                e.preventDefault();
+                const currentOpacity = window.getComputedStyle(overlay).opacity;
+                overlay.style.opacity = currentOpacity === '0' ? '1' : '0';
+            }
+        });
+    });
+});
+
 
